@@ -7,12 +7,10 @@
         mc:Ignorable="d"
         Title="Dolgozatok" Height="450" Width="800">
     <Grid Margin="15">
-        <StackPanel>
             <DataGrid x:Name="dgdolgozat" AutoGenerateColumns="False" CanUserAddRows="False">
                 <DataGridTextColumn Header="Nev" Binding="{Binding Nev}" Width="*" />
                 <DataGridTextColumn Header="Eletkor" Binding="{Binding Eletkor}" Width="100" />
                 <DataGridTextColumn Header="Pontszam" Binding="{Binding Pontszam}" Width="100" />
             </DataGrid>
-        </StackPanel>
     </Grid>
 </Window>
