@@ -31,13 +31,13 @@ namespace Dolgozatok
 
         }
 
-        
 
+        List<Dolgozat> dolgozatok = new List<Dolgozat>();
         public MainWindow()
         {
             InitializeComponent();
 
-            List<Dolgozat> dolgozatok = new List<Dolgozat>();
+            
 
             dolgozatok.Add(new Dolgozat("Kiss Péter", 16, 87));
             dolgozatok.Add(new Dolgozat("Nagy Anna", 17, 92));
@@ -54,7 +54,14 @@ namespace Dolgozatok
 
         private void btnHozzaad_Click(object sender, RoutedEventArgs e)
         {
-            
+            Dolgozat dolgozat = new Dolgozat(txtNev.Text, int.Parse(txtEletkor.Text), int.Parse(txtPontszam.Text));
+            dolgozatok.Add(dolgozat);
+
+            dgdolgozat.Items.Refresh();
+
+            txtNev.Clear();
+            txtEletkor.Clear();
+            txtPontszam.Clear();
         }
 
         private void btnModosit_Click(object sender, RoutedEventArgs e)
