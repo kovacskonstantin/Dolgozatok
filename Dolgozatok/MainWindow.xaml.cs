@@ -20,5 +20,15 @@ namespace Dolgozatok
         {
             InitializeComponent();
         }
+
+        private void btnHozzaad_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnModosit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
