@@ -66,7 +66,11 @@ namespace Dolgozatok
 
         private void btnModosit_Click(object sender, RoutedEventArgs e)
         {
+            var sorok = dolgozatok.Select(x => $"{x.Nev};{x.Eletkor};{x.Pontszam}").ToList();
 
+            System.IO.File.WriteAllLines("dolgozatok.txt", sorok);
+
+            MessageBox.Show("Sikeres Mentés!");
         }
     }
 }
