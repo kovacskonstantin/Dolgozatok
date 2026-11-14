@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dolgozatok"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Dolgozatok" Height="450" Width="800">
+    <Grid Margin="15">
+        <StackPanel>
+            <DataGrid x:Name="dgdolgozat" AutoGenerateColumns="False" CanUserAddRows="False">
+                <DataGridTextColumn Header="Nev" Binding="{Binding Nev}" Width="*" />
+                <DataGridTextColumn Header="Eletkor" Binding="{Binding Eletkor}" Width="100" />
+                <DataGridTextColumn Header="Pontszam" Binding="{Binding Pontszam}" Width="100" />
+            </DataGrid>
+        </StackPanel>
     </Grid>
 </Window>
